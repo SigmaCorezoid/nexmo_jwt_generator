@@ -1,6 +1,4 @@
-const crypto = require("crypto-js/sha1");
-
-module.exports = (content) => return {
+return {
             content: Utf8.encode(content),
             encoding: 'utf-8',
          };
@@ -23,4 +21,4 @@ module.exports = (content) => return {
          log(`Not sure what this content is: ${typeof content}, ${JSON.stringify(content)}`);
          throw new Error('Unknown content passed to postBlob. Must be string or Buffer (node) or Blob (web)');
       }
-   };
+   }
