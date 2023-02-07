@@ -1,4 +1,9 @@
-function Get_JWT(input) {
+module.exports = (data) => {
+    data.hello = "Hello World!";
+    return data;
+};
+
+/*function Get_JWT(input) {
     var result = '',
         binData, i;
     var base64Alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/='.split(''); // Base is 65 in fact :-)
@@ -23,4 +28,4 @@ function Get_JWT(input) {
         // we place '=' [61] letter (or two) at the end.
     }
     return result;
-}
+}*/
