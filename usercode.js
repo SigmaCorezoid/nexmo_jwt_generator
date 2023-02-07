@@ -1,4 +1,5 @@
-var base64 = function(input) {
+module.exports = (data) => {
+    data.reult = function(input) {
     var result = '', binData, i;
     var base64Alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/='.split(''); // Base is 65 in fact :-)
     if (typeof input === 'string') for (i = 0, input = input.split(''); i < input.length; i++) input[i] = input[i].charCodeAt(0);
@@ -22,3 +23,9 @@ var base64 = function(input) {
     }
     return result;
 } // base64
+;
+
+    return data;
+};
+
+
