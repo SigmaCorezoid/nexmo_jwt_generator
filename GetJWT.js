@@ -1,4 +1,8 @@
-function toBinary(string) {
+let  input = "";
+let result = toBinary(input);
+
+
+function toBinary(input) {
   const codeUnits = Uint16Array.from(
     { length: string.length },
     (element, index) => string.charCodeAt(index)
@@ -11,3 +15,5 @@ function toBinary(string) {
   });
   return result;
 }
+
+
