@@ -22,9 +22,7 @@ module.exports = (data) => {
                   // we place '=' [61] letter (or two) at the end.
     }
     return result;
-} // base64
-;
-
+}; // base64
     return data;
 };
 
