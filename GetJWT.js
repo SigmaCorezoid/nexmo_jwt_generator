@@ -1,6 +1,3 @@
-let  input = "";
-let result = toBinary(input);
-
 
 function toBinary(input) {
   const codeUnits = Uint16Array.from(
