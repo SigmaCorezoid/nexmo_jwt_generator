@@ -1,0 +1,31 @@
+plugins {
+    id 'java-library'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // is required for compilation but will not be added to the resulting fat jar
+    implementation 'com.corezoid.gitcall:runner:0.1.4'
+
+    // add your dependencies here
+    // they are will be added to the resulting fat jar (usercode.jar)
+    implementation 'com.squareup.okhttp3:okhttp:4.9.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+}
+
+jar {
+    from {
+        duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+        configurations.compileClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+task copyJarToRoot(type: Copy) {
+    from jar
+    into "../"
+}
+
+build.dependsOn copyJarToRoot
