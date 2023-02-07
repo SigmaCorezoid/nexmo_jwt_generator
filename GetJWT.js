@@ -1,6 +1,8 @@
 
 function toBinary(input) {
-  const codeUnits = Uint16Array.from(
+   let result = input + "!!!";
+  
+ /* const codeUnits = Uint16Array.from(
     { length: string.length },
     (element, index) => string.charCodeAt(index)
   );
@@ -9,7 +11,7 @@ function toBinary(input) {
   let result = "";
   charCodes.forEach((char) => {
     result += String.fromCharCode(char);
-  });
+  });*/
   return result;
 }
 
